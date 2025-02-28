@@ -1,3 +1,6 @@
+<a href="https://arxiv.org/abs/2502.14185"><img src="https://img.shields.io/badge/arXiv-Paper-red"></a> 
+<a href="https://andreasnaoum.github.io/reflex-viz/"><img src="https://img.shields.io/badge/Project-Page-yellow"></a>
+
 # REFLEX Dataset: A Multimodal Dataset of Human Reactions to Robot Failures and Explanations
 
 REFLEX (Robotic Explanations to FaiLures and Human EXpressions) is a comprehensive multimodal dataset capturing human reactions to robot failures and subsequent explanations in collaborative settings. This dataset facilitates research into human-robot interaction dynamics, addressing the need to study reactions to both initial failures and explanations, as well as the evolution of these reactions in long-term interactions.
@@ -58,13 +61,13 @@ See `DatasetGuide.md` for more detailed about the dataset.
 #### Command-line Arguments
 
 - `--participant`: Participant code in the format `{strategy}-{number}` (e.g., 'C1-1')
-- `--max-frames`: Maximum number of frames to process (default: 18000)
-- `--jpeg-quality`: JPEG compression quality for images from 1-100 (default: 15)
+- `--max-frames`: Maximum number of frames to process (optional, default: 18000)
+- `--jpeg-quality`: JPEG compression quality for images from 1-100 (optional, default: 15)
 - `--data-path`: Path to the data directory (optional)
-- `--face-3d`: Enable 3D face visualization
-- `--gaze-3d`: Enable 3D gaze visualization
-- `--body-3d`: Enable 3D body visualization
-- `--openface-confidence`: Minimum confidence threshold for OpenFace data from 0.0-1.0 (default: 0.7)
+- `--face-3d`: Enable 3D face visualization (optional)
+- `--gaze-3d`: Enable 3D gaze visualization (optional)
+- `--body-3d`: Enable 3D body visualization (optional)
+- `--openface-confidence`: Minimum confidence threshold for OpenFace data from 0.0-1.0 (optional, default: 0.7)
 
 ### Visualization Features
 
