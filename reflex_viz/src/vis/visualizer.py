@@ -9,6 +9,7 @@ from core.video import VideoSource
 from data_io.readers import AudioDataReader, CSVReader
 from utils.helpers import get_synchronized_frame
 from vis.lists import *
+from vis.layouts import create_single_cam_rrb, create_default_rrb
 
 
 class DataVisualizer:
@@ -89,10 +90,15 @@ class DataVisualizer:
             static=True,
         )
 
+        blueprint_default = create_default_rrb()
+        rr.send_blueprint(blueprint_default)
+
     def log_and_visualize(self):
         """Process and visualize video data from cameras."""
         # Use single camera mode if second camera not found
         if not self.video_cam2_found:
+            blueprint_single_camera = create_single_cam_rrb()
+            rr.send_blueprint(blueprint_single_camera)
             self._process_single_camera()
             return
 

@@ -45,7 +45,7 @@ def create_default_rrb() -> rrb.Blueprint:
         rrb.TimePanel(state="collapsed"),
     )
 
-def create_video1_rrb() -> rrb.Blueprint:
+def create_single_cam_rrb() -> rrb.Blueprint:
     """Create rerun blueprint."""
     return rrb.Blueprint(
         rrb.Horizontal(
