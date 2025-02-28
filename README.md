@@ -17,7 +17,7 @@ The data was collected from a user study where participants collaborated with a 
 │   ├── requirements.txt  # Python dependencies for visualization
 │   └── main.py           # Main visualization script
 ├── LICENSE.md            # MIT License details
-└── README.md             # This filet
+└── README.md             # This file
 ```
 
 ## Dataset Access
@@ -46,7 +46,7 @@ The repository includes a visualization tool built using [Rerun](https://www.rer
 To visualize participant interactions with the dataset:
 
 ```bash
-python main.py --participant C1-1
+python src/main.py --participant C1-1
 ```
 
 Replace `C1-1` with the participant code following the format `{strategy}-{participant_number}`, where:
