@@ -1,6 +1,6 @@
 import { WebViewer } from "@rerun-io/web-viewer";
 
-const rrdUrl = "https://github.com/andreasnaoum/reflex-viz/blob/main/Recordings/reflex_viz_sample.rrd";
+const rrdUrl = "https://raw.githubusercontent.com/andreasnaoum/reflex-viz/main/Recordings/reflex_viz_sample.rrd";
 const parentElement = document.getElementById("demo1");
 
 const viewer = new WebViewer();
