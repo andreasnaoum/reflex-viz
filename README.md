@@ -26,6 +26,8 @@ The full dataset is available on Zenodo: [https://zenodo.org/records/14160783](h
 
 ## Quick Start
 
+The repository includes a visualization tool built using [Rerun](https://www.rerun.io/), an open-source visualization tool for multimodal data.
+
 ### Installation
 
 1. Clone this repository:
