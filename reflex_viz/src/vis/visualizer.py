@@ -206,7 +206,7 @@ class DataVisualizer:
             self.analysis.pop(0)
 
             if not self.analysis:
-                self._log_no_failure()
+                log_no_failure()
                 return
 
             current_phase = self.analysis[0]
