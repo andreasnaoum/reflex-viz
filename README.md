@@ -16,7 +16,7 @@ The data was collected from a [user study](https://arxiv.org/abs/2303.16010) whe
 ```
 ├── Dataset               
 │   ├── Data               # Download the dataset here
-│   └── DatasetGuide.md    # Python dependencies for visualization
+│   └── DatasetGuide.md    # Info and Guides for the dataset
 ├── reflex_visualization/  # Code for visualizing the multimodal data
 │   ├── requirements.txt   # Python dependencies for visualization
 │   └── src                # Visualization Code
