@@ -4,60 +4,57 @@
 
 # REFLEX Dataset: A Multimodal Dataset of Human Reactions to Robot Failures and Explanations
 
-REFLEX (Robotic Explanations to FaiLures and Human EXpressions) is a comprehensive multimodal dataset capturing human reactions to robot failures and subsequent explanations in collaborative settings. This dataset facilitates research into human-robot interaction dynamics, addressing the need to study reactions to both initial failures and explanations, as well as the evolution of these reactions in long-term interactions.
+
 
 ## Overview
 
-The REFLEX dataset provides rich, annotated data on human responses to different types of failures, explanation levels, and explanation varying strategies. It contributes to the development of more robust, adaptive, and satisfying robotic systems capable of maintaining positive relationships with human collaborators, even during challenges like repeated failures.
+REFLEX (Robotic Explanations to FaiLures and Human EXpressions) is a comprehensive multimodal dataset capturing human reactions to robot failures and subsequent explanations in collaborative settings. This dataset facilitates research into human-robot interaction dynamics, addressing the need to study reactions to both initial failures and explanations, as well as the evolution of these reactions in long-term interactions.
 
-The data was collected from a user study where participants collaborated with a robot on a task where the robot experienced programmed failures. Different explanation strategies were employed across participants to study their effects.
+The data was collected from a [user study](https://arxiv.org/abs/2303.16010) where participants collaborated with a robot on a task where the robot experienced programmed failures. Different explanation strategies were employed across participants to study their effects.
 
 ## Repository Structure
 
 ```
-├── Dataset               # Download the dataset here
-│   └── DatasetGuide.md   # Python dependencies for visualization
-├── reflex_viz/           # Code for visualizing the multimodal data
-│   ├── requirements.txt  # Python dependencies for visualization
-│   └── main.py           # Main visualization script
-├── LICENSE.md            # MIT License details
-└── README.md             # This file
+├── Dataset               
+│   ├── Data               # Download the dataset here
+│   └── DatasetGuide.md    # Python dependencies for visualization
+├── reflex_visualization/  # Code for visualizing the multimodal data
+│   ├── requirements.txt   # Python dependencies for visualization
+│   └── src                # Visualization Code
+│       ├── ...            
+│       └── main.py        # Main visualization script
+├── LICENSE.md             # MIT License details
+└── README.md              # This file
 ```
-
-## Dataset Access
-
-The full dataset is available on Zenodo: [https://zenodo.org/records/14160783](https://zenodo.org/records/14160783)
 
 ## Quick Start
 
-The repository includes a visualization tool built using [Rerun](https://www.rerun.io/), an open-source visualization tool for multimodal data.
+The repository includes a visualization tool built using [Rerun](https://www.rerun.io/), an open-source visualization sdk for multimodal data.
 
-### Installation
+### Installation and Run the Visualization Tool
 
 1. Clone this repository:
    ```bash
    git clone https://github.com/your-org/reflex-viz.git
-   cd reflex-viz
    ```
 
-2. Install the dependencies for visualization:
+2. Download the Data from [Zenodo](https://zenodo.org/records/14160783) and place them under the Dataset folder.
+
+3. Install the dependencies for visualization:
    ```bash
+   cd reflex-visualization
    pip install -r requirements.txt
    ```
 
-### Running the Visualization Tool
-
-To visualize participant interactions with the dataset:
-
-```bash
-python src/main.py --participant C1-1
-```
-
+4. To visualize a participant interaction with the dataset:
+   ```bash
+   python src/main.py --participant C1-1
+   ```
 Replace `C1-1` with the participant code following the format `{strategy}-{participant_number}`, where:
 - Strategy is one of: C1, C2, C3, D1, or D2
 - Participant number is between 1 and 11
 
-See `DatasetGuide.md` for more detailed about the dataset.
+See [`DatasetGuide.md`](Dataset/DatasetGuide.md) for more detailed about the dataset.
 
 #### Command-line Arguments
 
@@ -105,7 +102,3 @@ If you use our dataset, please cite [our paper](https://arxiv.org/abs/2502.14185
     url={https://arxiv.org/abs/2502.14185}, 
 }
 ```
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.

@@ -8,18 +8,6 @@ The REFLEX dataset collects human behavioral reactions to robotic failures durin
 
 The dataset is available on Zenodo: [https://zenodo.org/records/14160783](https://zenodo.org/records/14160783)
 
-## Experimental Setup
-
-In the Human-Robot Collaboration (HRC) task:
-- Users placed objects on a table in front of the robot
-- The robot would pick up objects, carry and place them on a shelf
-- Users interacted with the robot in four rounds, with four objects per round
-- Pre-programmed 11 robotic failures occurred during the Pick, Carry, and Place actions
-- Upon failure, the robot provided explanations according to one of five different explanation strategies
-- The experiment was recorded using two cameras:
-  - Camera 1: Focused on both the user and the robot
-  - Camera 2: Placed on the robot's torso, focused solely on the user
-
 ### Explanation Strategies
 
 There are five different explanation strategies in the dataset:
@@ -61,6 +49,8 @@ Strategy_Dir/
     - body.csv
     - speech.csv
     - time.csv
+    - video_cam1.mp4
+    - video_cam2.mp4
 ```
 
 ## Dataset Components
@@ -72,6 +62,11 @@ Each participant folder contains the following data files:
   - Failure type
   - Explanation level
   - Phase
+    - Failure events were divided into four phases:
+      1. Pre-failure phase: Period before the failure occurs
+      2. Failure phase: When the actual failure action takes place
+      3. Explanation phase: When the robot provides an explanation for the failure
+      4. Resolution phase: When the robot guides the participant to resolve the issue
   - Start and end frame of failure
 
 - **Facetorch** (`facetorch.csv`) - [Facetorch](https://github.com/tomas-gajarsky/facetorch)
@@ -101,16 +96,12 @@ Each participant folder contains the following data files:
   - Pose classifications (e.g., crossed arms, arms behind back)
   - 2D and 3D Pose Landmarks
 
+- **Videos** (`video_cam1.mp4`, `video_cam2.mp4`)
+  - Cam1: Robot's view
+  - Cam2: Side camera
+  - All participant faces were anonymized using black masks created with MediaPipe Pose Landmark detection
+
 ### Notes
 
+- Data was synchronized based on the `video_cam1.mp4`
 - The `hume.csv` and `gaze.csv` files contain data only for frames within failure periods.
-
-## Data Collection and Processing
-
-- Data was sampled at a frequency of 4.4 Hz based on the video frame rate
-- All participant faces were anonymized using black masks created with MediaPipe Pose Landmark detection
-- Failure events were divided into four phases:
-  1. Pre-failure phase: Period before the failure occurs
-  2. Failure phase: When the actual failure action takes place
-  3. Explanation phase: When the robot provides an explanation for the failure
-  4. Resolution phase: When the robot guides the participant to resolve the issue
