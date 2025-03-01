@@ -58,13 +58,13 @@ See [`DatasetGuide.md`](Dataset/DatasetGuide.md) for more detailed about the dat
 #### Command-line Arguments
 
 - `--participant`: Participant code in the format `{strategy}-{number}` (e.g., 'C1-1')
-- `--max-frames`: Maximum number of frames to process (optional, default: 18000)
+- `--max-frames`: Maximum number of frames to process (optional, default: `None`)
 - `--jpeg-quality`: JPEG compression quality for images from 1-100 (optional, default: 15)
 - `--data-path`: Path to the data directory (optional)
-- `--face-3d`: Enable 3D face visualization (optional)
-- `--gaze-3d`: Enable 3D gaze visualization (optional)
-- `--body-3d`: Enable 3D body visualization (optional)
-- `--openface-confidence`: Minimum confidence threshold for OpenFace data from 0.0-1.0 (optional, default: 0.7)
+- `--face-3d`: Enable 3D face visualization (optional, default: false)
+- `--gaze-3d`: Enable 3D gaze visualization (optional, default: false)
+- `--body-3d`: Enable 3D body visualization (optional, default: false)
+- `--openface-confidence`: Minimum confidence threshold for OpenFace from 0.0-1.0 (optional, default: 0.7)
 
 ### Visualization Features
 

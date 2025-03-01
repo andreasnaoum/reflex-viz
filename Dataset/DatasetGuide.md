@@ -1,3 +1,6 @@
+<a href="https://zenodo.org/records/14160783"><img src="https://img.shields.io/badge/Zenodo-Dataset-green"></a> 
+<a href="https://arxiv.org/abs/2502.14185"><img src="https://img.shields.io/badge/arXiv-Paper-red"></a>
+
 # REFLEX Dataset Guide
 
 This guide provides detailed information about the REFLEX dataset, including its structure, contents, and how to access and visualize the data.
@@ -62,11 +65,6 @@ Each participant folder contains the following data files:
   - Failure type
   - Explanation level
   - Phase
-    - Failure events were divided into four phases:
-      1. Pre-failure phase: Period before the failure occurs
-      2. Failure phase: When the actual failure action takes place
-      3. Explanation phase: When the robot provides an explanation for the failure
-      4. Resolution phase: When the robot guides the participant to resolve the issue
   - Start and end frame of failure
 
 - **Facetorch** (`facetorch.csv`) - [Facetorch](https://github.com/tomas-gajarsky/facetorch)
@@ -105,3 +103,8 @@ Each participant folder contains the following data files:
 
 - Data was synchronized based on the `video_cam1.mp4`
 - The `hume.csv` and `gaze.csv` files contain data only for frames within failure periods.
+- Failure events were divided into four phases:
+    1. Pre-failure phase: Period before the failure occurs
+    2. Failure phase: When the actual failure action takes place
+    3. Explanation phase: When the robot provides an explanation for the failure
+    4. Resolution phase: When the robot guides the participant to resolve the issue
