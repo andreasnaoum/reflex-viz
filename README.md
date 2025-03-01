@@ -34,7 +34,7 @@ The repository includes a visualization tool built using [Rerun](https://www.rer
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-org/reflex-viz.git
+   git clone https://github.com/andreasnaoum/reflex-viz.git
    ```
 
 2. Download the Data from [Zenodo](https://zenodo.org/records/14160783) and place them under the Dataset folder.
@@ -85,6 +85,10 @@ The dataset allows for various analyses, including:
 4. Analyzing multimodal behavioral patterns in response to robot explanations
 
 One interesting insight from initial analysis shows lower confusion likelihood during pick failures compared to more complex carry-place failures, suggesting pick failures were perceived as easier to resolve.
+
+## Support
+
+If you have any questions or issues using the dataset or visualization tools, please contact Andreas Naoum at anaoum@kth.se.
 
 ## Reference
 
